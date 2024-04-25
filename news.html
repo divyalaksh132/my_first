@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro Space Agency - News</title>
+    <style>
+                body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0; /* Light gray background */
+            color: #333; /* Dark gray text */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ff6f61; /* Coral color */
+            color: #fff; /* White text */
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #ffcc5c; /* Yellow color */
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #333; /* Dark gray text */
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .news-container {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .news-article {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            animation: scrollNews 10s linear infinite; /* Adjust animation duration as needed */
+        }
+
+        .news-article h2 {
+            margin-bottom: 10px;
+            color: #333; /* Dark gray text */
+        }
+
+        .news-article p {
+            margin-bottom: 15px;
+        }
+
+        .news-article img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .read-more-link {
+            color: #ff6f61; /* Coral color */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .read-more-link:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes scrollNews {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Latest News</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="news-container">
+            <div class="news-article">
+                <img src="C:/Users/hp/Downloads/news1.jpg" alt="News 1">
+                <h2>SpaceX Successfully Launches Falcon 9 Rocket</h2>
+                <p>SpaceX, the private aerospace manufacturer, successfully launched its Falcon 9 rocket into orbit yesterday.</p>
+                <a href="#" class="read-more-link">Read More</a>
+            </div>
+
+            <div class="news-article">
+                <img src="C:/Users/hp/Downloads/news2.jpg" alt="News 2">
+                <h2>Artemis 2 Orion spacecraft starts testing ahead of moon mission with astronauts in 2025</h2>
+                <p>The Artemis 2 Orion spacecraft began testing on April 10 in an altitude chamber at NASA. The spacecraft will bring four astronauts around the moon no earlier than 2025.</p>
+                <a href="#" class="read-more-link">Read More</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

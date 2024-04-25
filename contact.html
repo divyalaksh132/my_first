@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro Space Agency - Join Mission</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #00171f; /* Dark blue color */
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+header {
+            background-color: #ff6f61; /* Coral color */
+            color: #fff; /* White text */
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #ffcc5c; /* Yellow color */
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #333; /* Dark gray text */
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #ffcc00; /* Yellow color */
+        }
+
+        p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #ffcc00; /* Yellow color */
+            color: #00171f; /* Dark blue color */
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #e6b800; /* Darker yellow color */
+        }
+
+        .details {
+            display: none; /* Initially hide details */
+        }
+
+        .submitted-details {
+            margin-top: 30px;
+            background-color: #333; /* Dark grey color */
+            color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: left;
+        }
+
+        .contact-info {
+            margin-top: 30px;
+            font-size: 18px;
+        }
+
+        .social-links {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 20px;
+        }
+
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<header>
+        
+   </header>
+
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+	    <li><a href="Weather.html">Weather</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Join Our Space Mission</h1>
+        <p>We're preparing for an exciting space mission and we want you to be part of it! Please fill out the form below to register your interest.</p>
+        <form action="#" method="post" id="missionForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="age" placeholder="Your Age" required>
+            <textarea name="message" placeholder="Why do you want to join the mission?" required></textarea>
+            <input type="submit" value="Register">
+        </form>
+
+        <!-- Display submitted details -->
+        <div class="details" id="submittedDetails">
+            <div class="submitted-details">
+                <h2>Details Submitted:</h2>
+                <p><strong>Name:</strong> <span id="name"></span></p>
+                <p><strong>Email:</strong> <span id="email"></span></p>
+                <p><strong>Age:</strong> <span id="age"></span></p>
+                <p><strong>Message:</strong> <span id="message"></span></p>
+            </div>
+            <div class="contact-info">
+                <p>For further inquiries, please contact us:</p>
+                <p>Email: <a href="mailto:astrospaceagency@gmail.com">astrospaceagency@gmail.com</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Astro Space Agency. All rights reserved. Thanks for visiting our webpage! Have a great day ahead.
+    </div>
+
+    <script>
+        const form = document.getElementById('missionForm');
+        const submittedDetails = document.getElementById('submittedDetails');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Retrieve form data
+            const formData = new FormData(form);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const age = formData.get('age');
+            const message = formData.get('message');
+
+            // Display submitted details
+            document.getElementById('name').textContent = name;
+            document.getElementById('email').textContent = email;
+            document.getElementById('age').textContent = age;
+            document.getElementById('message').textContent = message;
+            submittedDetails.style.display = 'block'; // Show submitted details
+            form.reset(); // Reset form fields
+        });
+    </script>
+</body>
+</html>

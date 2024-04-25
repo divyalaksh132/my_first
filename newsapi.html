@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro Space Agency - News</title>
+    <style>
+        /* Your CSS styles */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Latest News</h1>
+    </header>
+
+        <div class="container">
+        <div class="news-container" id="news-container">
+            <!-- News articles will be dynamically added here -->
+        </div>
+    </div>
+
+    <script>
+        // Fetch news from an API
+        const apiKey = 'tsPVFQ7rtOd1MNJaeR92yi8pgPuAlhCQoTAa16IF'; // Replace 'YOUR_API_KEY' with your actual API key
+
+        fetch(`https://api.example.com/news?key=${apiKey}`)
+            .then(response => response.json())
+            .then(data => {
+                const newsContainer = document.getElementById('news-container');
+
+                // Loop through the fetched news articles and create HTML elements to display them
+                data.articles.forEach(article => {
+                    const newsArticle = document.createElement('div');
+                    newsArticle.classList.add('news-article');
+
+                    const image = document.createElement('img');
+                    image.src = article.image;
+                    image.alt = article.title;
+
+                    const title = document.createElement('h2');
+                    title.textContent = article.title;
+
+                    const description = document.createElement('p');
+                    description.textContent = article.description;
+
+                    const readMoreLink = document.createElement('a');
+                    readMoreLink.href = article.url;
+                    readMoreLink.textContent = 'Read More';
+                    readMoreLink.classList.add('read-more-link');
+
+                    // Append elements to the news article container
+                    newsArticle.appendChild(image);
+                    newsArticle.appendChild(title);
+                    newsArticle.appendChild(description);
+                    newsArticle.appendChild(readMoreLink);
+
+                    // Append the news article to the news container
+                    newsContainer.appendChild(newsArticle);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching news:', error);
+            });
+    </script>
+</body>
+</html>

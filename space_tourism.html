@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Space Tourism</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h1, h2 {
+    text-align: center;
+    color: #4285f4;
+  }
+  p {
+    text-align: justify;
+    line-height: 1.6;
+  }
+  .section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  .section:nth-child(odd) {
+    background-color: #f9f9f9; /* Light gray background color */
+  }
+  .section:nth-child(even) {
+    background-color: #e0f7fa; /* Light blue background color */
+  }
+  .image-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  .interest-rating {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .interest-rating label {
+    color: #4285f4;
+  }
+  .interest-rating input[type="radio"] {
+    display: none;
+  }
+  .interest-rating label:before {
+    content: '\2605';
+    font-size: 36px;
+    color: #ccc;
+    cursor: pointer;
+    background-color: #f9f9f9; /* Light gray background color */
+    padding: 5px;
+    border-radius: 50%; /* Makes the background circle-shaped */
+  }
+  .interest-rating input[type="radio"]:checked ~ label:before {
+    color: #ffbb00;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="section">
+    <h1>Experience the Thrill of Space Travel</h1>
+    <div class="image-container">
+      <img src="C:\Users\hp\Downloads\galaxy.jpg" alt="Galaxy">
+      <img src="C:\Users\hp\Downloads\starlink.jpg" alt="Stalink">
+    </div>
+    <p>Embark on an extraordinary journey with our exclusive space tourism packages, offering the adventure of a lifetime. Our guided tours provide unparalleled access to nearby celestial bodies, allowing you to witness the wonders of the universe up close. From the rugged terrain of the moon to the breathtaking vistas of Mars, each tour promises an unforgettable experience for space enthusiasts of all levels.</p>
+  </div>
+  
+  <div class="section">
+    <h2>Explore the Cosmos</h2>
+    <p>Our expert team ensures your safety and comfort throughout the entire journey, providing you with the opportunity to delve into the mysteries of outer space without worry. Whether you're a seasoned explorer or embarking on your first interstellar voyage, our tours cater to all levels of curiosity and interest. Prepare to be amazed as you witness the beauty and grandeur of our solar system like never before.</p>
+  </div>
+  
+  <div class="section">
+    <h2>Plan Your Celestial Adventure</h2>
+    <p>Discover the diverse range of packages we offer and start planning your celestial adventure today. Choose from a variety of tour options, each carefully curated to provide you with an immersive and educational experience. Whether you dream of walking on the surface of the moon or gazing at the Martian landscape from orbit, our tours offer something for everyone.</p>
+  </div>
+  
+  <div class="section">
+    <h2>Join Us in Pushing the Boundaries</h2>
+    <p>Join us as we push the boundaries of human exploration and embark on a journey that will inspire generations to come. Take the first step towards realizing your dreams of space travel and book your tour with us today. Get ready to embark on an adventure that will leave you in awe of the vastness and beauty of the cosmos.</p>
+  </div>
+
+  <div class="section interest-rating">
+    <p>Rate your interest in space travel:</p>
+    <input type="radio" id="star5" name="rating" value="5">
+    <label for="star5"></label>
+    <input type="radio" id="star4" name="rating" value="4">
+    <label for="star4"></label>
+    <input type="radio" id="star3" name="rating" value="3">
+    <label for="star3"></label>
+    <input type="radio" id="star2" name="rating" value="2">
+    <label for="star2"></label>
+    <input type="radio" id="star1" name="rating" value="1">
+    <label for="star1"></label>
+  </div>
+</div>
+
+</body>
+</html>

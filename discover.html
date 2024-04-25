@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro Space Agency - Home</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+       html {
+    background-image: url("C:/Users/hp/Downloads/planets.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-attachment: fixed; /* Set the background to fixed */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #ffcc00; /* Yellow color */
+        }
+
+        p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ffcc00; /* Yellow color */
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #e6b800; /* Darker yellow color on hover */
+        }
+
+        img {
+            width: 300px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .discover-content {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .topic {
+            font-size: 24px;
+            color: #ffcc00; /* Yellow color */
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            color: #fff;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #333; /* Dark gray */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Astro Space Agency</h1>
+        <p>Explore the wonders of space with us!</p>
+        <a href="#" class="btn" id="discover-btn">Discover More</a>
+        <div class="discover-content" id="discover-content">
+            <div class="topic">1. Distance of Planets from Earth</div>
+            <table>
+                <tr>
+                    <th>Planet</th>
+                    <th>Minimal Distance (AU)</th>
+                    <th>Minimal Distance (millions of km)</th>
+                    <th>Maximal Distance (AU)</th>
+                    <th>Maximal Distance (millions of km)</th>
+                </tr>
+                <tr>
+                    <td>Venus</td>
+                    <td>0.266</td>
+                    <td>39.79</td>
+                    <td>1.736</td>
+                    <td>259.71</td>
+                </tr>
+                <tr>
+                    <td>Mars</td>
+                    <td>0.372</td>
+                    <td>55.65</td>
+                    <td>2.671</td>
+                    <td>399.58</td>
+                </tr>
+                <tr>
+                    <td>Mercury</td>
+                    <td>0.552</td>
+                    <td>82.5</td>
+                    <td>1.446</td>
+                    <td>216.3</td>
+                </tr>
+                <tr>
+                    <td>Sun</td>
+                    <td>0.983</td>
+                    <td>147</td>
+                    <td>1.017</td>
+                    <td>152.1</td>
+                </tr>
+                <tr>
+                    <td>Jupiter</td>
+                    <td>3.957</td>
+                    <td>591.97</td>
+                    <td>6.454</td>
+                    <td>965.52</td>
+                </tr>
+                <tr>
+                    <td>Saturn</td>
+                    <td>8.050</td>
+                    <td>1 204.28</td>
+                    <td>11.046</td>
+                    <td>1 652.48</td>
+                </tr>
+                <tr>
+                    <td>Uranus</td>
+                    <td>17.292</td>
+                    <td>2 586.88</td>
+                    <td>21.089</td>
+                    <td>3 154.91</td>
+                </tr>
+                <tr>
+                    <td>Pluto</td>
+                    <td>28.699</td>
+                    <td>4 293.37</td>
+                    <td>50.291</td>
+                    <td>7 523.53</td>
+                </tr>
+                <tr>
+                    <td>Neptune</td>
+                    <td>28.817</td>
+                    <td>4 311.02</td>
+                    <td>31.317</td>
+                    <td>4 685.02</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var discoverButton = document.getElementById("discover-btn");
+            var discoverContent = document.getElementById("discover-content");
+
+            // Toggle content visibility when button is clicked
+            discoverButton.addEventListener("click", function() {
+                if (discoverContent.style.display === "none") {
+                    discoverContent.style.display = "block";
+                } else {
+                    discoverContent.style.display = "none";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
